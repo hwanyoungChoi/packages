@@ -1,0 +1,18 @@
+{
+  "name": "@conychoi/prettier-config",
+  "version": "1.0.0",
+  "description": "공통 Prettier 설정",
+  "main": "index.js",
+  "keywords": [
+    "prettier",
+    "config"
+  ],
+  "author": "HwanyoungChoi",
+  "license": "ISC",
+  "peerDependencies": {
+    "prettier": ">=3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
