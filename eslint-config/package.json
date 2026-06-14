@@ -1,0 +1,44 @@
+{
+  "name": "@conychoi/eslint-config",
+  "version": "1.0.0",
+  "description": "공통 ESLint 설정 (flat config)",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "react.js",
+    "next.js",
+    "react-native.js"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./react": "./react.js",
+    "./next": "./next.js",
+    "./react-native": "./react-native.js"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "flat-config"
+  ],
+  "author": "HwanyoungChoi",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.7.0 <10",
+    "typescript": ">=5.0.0"
+  },
+  "dependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.0.0",
+    "@next/eslint-plugin-next": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-native": "^5.0.0",
+    "typescript-eslint": "^8.0.0"
+  }
+}
