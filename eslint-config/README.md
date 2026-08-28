@@ -1,11 +1,11 @@
-# @superbin/eslint-config
+# @conychoi/eslint-config
 
 ESLint 설정 (flat config)
 
 ## 설치
 
 ```bash
-npm install --save-dev @conychoi/prettier-config
+npm install --save-dev @conychoi/eslint-config
 ```
 
 ## 사용법
@@ -15,7 +15,7 @@ npm install --save-dev @conychoi/prettier-config
 ### Next.js 프로젝트
 
 ```js
-import nextConfig from "@superbin/eslint-config/next";
+import nextConfig from "@conychoi/eslint-config/next";
 
 export default nextConfig;
 ```
@@ -23,7 +23,7 @@ export default nextConfig;
 ### React 프로젝트
 
 ```js
-import reactConfig from "@superbin/eslint-config/react";
+import reactConfig from "@conychoi/eslint-config/react";
 
 export default reactConfig;
 ```
@@ -31,7 +31,7 @@ export default reactConfig;
 ### React Native 프로젝트
 
 ```js
-import rnConfig from "@superbin/eslint-config/react-native";
+import rnConfig from "@conychoi/eslint-config/react-native";
 
 export default rnConfig;
 ```
@@ -39,7 +39,7 @@ export default rnConfig;
 ### TypeScript만 (React 없이)
 
 ```js
-import baseConfig from "@superbin/eslint-config";
+import baseConfig from "@conychoi/eslint-config";
 
 export default baseConfig;
 ```
@@ -87,7 +87,7 @@ next.js           react-native.js
 flat config는 배열을 spread해서 항목을 덧붙이는 형태로 확장합니다.
 
 ```js
-import nextConfig from "@superbin/eslint-config/next";
+import nextConfig from "@conychoi/eslint-config/next";
 
 export default [
   ...nextConfig,
