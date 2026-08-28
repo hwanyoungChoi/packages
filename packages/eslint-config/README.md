@@ -5,7 +5,7 @@ ESLint 설정 (flat config)
 ## 설치
 
 ```bash
-npm install --save-dev @conychoi/eslint-config
+pnpm add -D @conychoi/eslint-config eslint typescript
 ```
 
 ## 사용법
@@ -101,11 +101,14 @@ export default [
 
 ## 기술스택
 
-- peerDependency: eslint (>=9.0.0), typescript (>=5.0.0)
+- peerDependency: eslint (>=9.7.0 <10), typescript (>=5.0.0)
 - 포함: typescript-eslint, eslint-plugin-import, eslint-plugin-react, eslint-plugin-react-hooks, eslint-plugin-react-native, @next/eslint-plugin-next, eslint-config-prettier
+
+> ESLint 10은 아직 지원하지 않습니다. 일부 플러그인이 대응되지 않아 v9를 사용하세요.
+> TypeScript도 마찬가지로 `typescript-eslint@8`이 `<6.1.0`까지만 지원하므로 5.x를 권장합니다.
 
 ## 배포
 
-```bash
-npm publish
-```
+이 패키지는 [conychoi/packages](https://github.com/hwanyoungChoi/packages) 모노레포에서
+changesets로 관리합니다. 배포 절차는
+[루트 README](https://github.com/hwanyoungChoi/packages#배포)를 참고하세요.
