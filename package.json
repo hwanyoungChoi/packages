@@ -1,0 +1,32 @@
+{
+  "name": "@conychoi/packages",
+  "version": "0.0.0",
+  "private": true,
+  "description": "@conychoi 공통 설정 패키지 모노레포",
+  "author": "HwanyoungChoi",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=10"
+  },
+  "prettier": "@conychoi/prettier-config",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.1",
+    "@conychoi/eslint-config": "workspace:*",
+    "@conychoi/prettier-config": "workspace:*",
+    "eslint": "^9.39.5",
+    "prettier": "^3.9.6",
+    "typescript": "^5.9.3"
+  }
+}
