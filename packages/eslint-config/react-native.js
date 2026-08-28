@@ -1,6 +1,7 @@
-import { FlatCompat } from "@eslint/eslintrc";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+
+import { FlatCompat } from "@eslint/eslintrc";
 
 import reactConfig from "./react.js";
 

@@ -9,6 +9,15 @@
   ],
   "author": "HwanyoungChoi",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hwanyoungChoi/packages.git",
+    "directory": "packages/prettier-config"
+  },
+  "homepage": "https://github.com/hwanyoungChoi/packages/tree/main/packages/prettier-config#readme",
+  "bugs": {
+    "url": "https://github.com/hwanyoungChoi/packages/issues"
+  },
   "peerDependencies": {
     "prettier": ">=3.0.0"
   },
