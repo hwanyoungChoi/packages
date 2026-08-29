@@ -1,6 +1,6 @@
 {
   "name": "@conychoi/prettier-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "공통 Prettier 설정",
   "main": "index.js",
   "keywords": [
