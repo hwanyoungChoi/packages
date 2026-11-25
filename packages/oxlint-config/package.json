@@ -1,0 +1,50 @@
+{
+  "name": "@conychoi/oxlint-config",
+  "version": "0.0.0",
+  "description": "공통 Oxlint 설정 (ESLint와 함께 쓰는 구성)",
+  "type": "module",
+  "files": [
+    "base.json",
+    "react.json",
+    "next.json",
+    "eslint.js"
+  ],
+  "exports": {
+    "./base.json": "./base.json",
+    "./react.json": "./react.json",
+    "./next.json": "./next.json",
+    "./eslint": "./eslint.js",
+    "./package.json": "./package.json"
+  },
+  "keywords": [
+    "oxlint",
+    "oxc",
+    "config"
+  ],
+  "author": "HwanyoungChoi",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hwanyoungChoi/packages.git",
+    "directory": "packages/oxlint-config"
+  },
+  "homepage": "https://github.com/hwanyoungChoi/packages/tree/main/packages/oxlint-config#readme",
+  "bugs": {
+    "url": "https://github.com/hwanyoungChoi/packages/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.7.0 <10",
+    "oxlint": "^1.95.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "eslint-plugin-oxlint": "^1.95.0"
+  }
+}

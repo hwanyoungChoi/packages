@@ -13,8 +13,8 @@
   "prettier": "@conychoi/prettier-config",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "oxlint && eslint .",
+    "lint:fix": "oxlint --fix && eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "changeset": "changeset",
@@ -24,8 +24,10 @@
   "devDependencies": {
     "@changesets/cli": "^3.0.1",
     "@conychoi/eslint-config": "workspace:*",
+    "@conychoi/oxlint-config": "workspace:*",
     "@conychoi/prettier-config": "workspace:*",
     "eslint": "^9.39.5",
+    "oxlint": "^1.95.0",
     "prettier": "^3.9.6",
     "typescript": "^5.9.3"
   }

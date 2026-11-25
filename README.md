@@ -5,10 +5,11 @@ pnpm workspace 기반 모노레포로 관리합니다.
 
 ## Packages
 
-| Package                                                                              | Version                                                                                                                   | Description        |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| [@conychoi/eslint-config](https://www.npmjs.com/package/@conychoi/eslint-config)     | [![npm](https://img.shields.io/npm/v/@conychoi/eslint-config)](https://www.npmjs.com/package/@conychoi/eslint-config)     | ESLint 공통 설정   |
-| [@conychoi/prettier-config](https://www.npmjs.com/package/@conychoi/prettier-config) | [![npm](https://img.shields.io/npm/v/@conychoi/prettier-config)](https://www.npmjs.com/package/@conychoi/prettier-config) | Prettier 공통 설정 |
+| Package                                                                              | Version                                                                                                                   | Description                           |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| [@conychoi/eslint-config](https://www.npmjs.com/package/@conychoi/eslint-config)     | [![npm](https://img.shields.io/npm/v/@conychoi/eslint-config)](https://www.npmjs.com/package/@conychoi/eslint-config)     | ESLint 공통 설정                      |
+| [@conychoi/prettier-config](https://www.npmjs.com/package/@conychoi/prettier-config) | [![npm](https://img.shields.io/npm/v/@conychoi/prettier-config)](https://www.npmjs.com/package/@conychoi/prettier-config) | Prettier 공통 설정                    |
+| [@conychoi/oxlint-config](https://www.npmjs.com/package/@conychoi/oxlint-config)     | [![npm](https://img.shields.io/npm/v/@conychoi/oxlint-config)](https://www.npmjs.com/package/@conychoi/oxlint-config)     | Oxlint 공통 설정 (ESLint와 함께 사용) |
 
 ## 구조
 
@@ -16,17 +17,19 @@ pnpm workspace 기반 모노레포로 관리합니다.
 .
 ├── packages/
 │   ├── eslint-config/     — @conychoi/eslint-config
+│   ├── oxlint-config/     — @conychoi/oxlint-config
 │   └── prettier-config/   — @conychoi/prettier-config
 ├── .changeset/            — 버전 관리 · CHANGELOG
-├── eslint.config.mjs      — 이 레포 자체에 자기 설정을 적용 (dogfooding)
+├── .oxlintrc.json         — 이 레포 자체에 자기 설정을 적용 (dogfooding)
+├── eslint.config.mjs      — 〃
 ├── pnpm-workspace.yaml
 └── package.json           — 워크스페이스 루트 (private)
 ```
 
 이 레포는 자기가 배포하는 설정을 스스로에게 적용합니다.
-`eslint.config.mjs`와 루트 `package.json`의 `prettier` 필드가 워크스페이스 링크를 통해
-`@conychoi/eslint-config` · `@conychoi/prettier-config`를 그대로 사용하므로,
-설정을 바꾸면 이 레포의 lint 결과에 바로 반영됩니다.
+`.oxlintrc.json`, `eslint.config.mjs`, 루트 `package.json`의 `prettier` 필드가 워크스페이스 링크를 통해
+세 패키지를 그대로 사용하므로, 설정을 바꾸면 이 레포의 lint 결과에 바로 반영됩니다.
+`pnpm lint`는 Oxlint를 먼저 돌리고, ESLint는 Oxlint에 없는 규칙만 검사합니다.
 
 ## 요구사항
 
