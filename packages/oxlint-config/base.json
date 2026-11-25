@@ -1,0 +1,26 @@
+{
+  "plugins": ["typescript", "unicorn", "oxc", "import"],
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {
+    "import/namespace": "off",
+    "import/named": "off",
+
+    "typescript/no-explicit-any": "warn",
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "typescript/consistent-type-imports": ["warn", { "prefer": "type-imports" }],
+    "typescript/ban-ts-comment": [
+      "warn",
+      {
+        "ts-ignore": false,
+        "ts-expect-error": "allow-with-description",
+        "ts-nocheck": true,
+        "ts-check": false
+      }
+    ],
+    "typescript/no-empty-object-type": "warn",
+
+    "no-console": "warn"
+  }
+}

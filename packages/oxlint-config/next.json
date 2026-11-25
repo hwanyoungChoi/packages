@@ -1,0 +1,9 @@
+{
+  "extends": ["./react.json"],
+  "plugins": ["nextjs"],
+  "rules": {
+    "nextjs/no-html-link-for-pages": "error",
+    "nextjs/no-sync-scripts": "error",
+    "nextjs/no-img-element": "warn"
+  }
+}
